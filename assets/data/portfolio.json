@@ -1,0 +1,184 @@
+{
+  "personalInfo": {
+    "name": "Mohamed Boumeroine",
+    "title": "Senior R&D Engineer",
+    "subtitle": "Angular | Spring Boot | Microservices",
+    "bio": "Senior R&D Engineer with 4+ years of experience designing and building enterprise-grade applications. I specialize in Angular micro-frontends and Spring Boot microservices, delivering scalable solutions for government and HR platforms. Passionate about clean architecture, DevOps automation, and turning complex business requirements into robust, maintainable software.",
+    "email": "mohamed.boumeroine98@gmail.com",
+    "phone": "+212 611 56 99 18",
+    "location": "Rabat, Morocco",
+    "avatar": "assets/images/profile.jpg",
+    "resumeUrl": "assets/CV-Mohamed-BOUMEROINE.pdf",
+    "socialLinks": [
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/mohamed-boumeroine-836662151/", "icon": "linkedin" },
+      { "name": "GitHub", "url": "https://github.com/mohamedboumeroine", "icon": "github" },
+      { "name": "Email", "url": "mailto:mohamed.boumeroine98@gmail.com", "icon": "email" }
+    ]
+  },
+  "skills": [
+    { "name": "Angular", "level": 95, "category": "frontend", "icon": "angular" },
+    { "name": "NgRx / RxJS", "level": 90, "category": "frontend", "icon": "ngrx" },
+    { "name": "TypeScript", "level": 92, "category": "frontend", "icon": "typescript" },
+    { "name": "Redux", "level": 80, "category": "frontend", "icon": "redux" },
+    { "name": "Micro-Frontends", "level": 88, "category": "frontend", "icon": "microfrontend" },
+    { "name": "HTML / CSS / SCSS", "level": 90, "category": "frontend", "icon": "html" },
+    { "name": "Java 17", "level": 93, "category": "backend", "icon": "java" },
+    { "name": "Spring Boot", "level": 92, "category": "backend", "icon": "spring" },
+    { "name": "Spring Cloud", "level": 85, "category": "backend", "icon": "spring" },
+    { "name": "Microservices", "level": 90, "category": "backend", "icon": "microservices" },
+    { "name": "PostgreSQL", "level": 88, "category": "backend", "icon": "postgresql" },
+    { "name": "MongoDB", "level": 78, "category": "backend", "icon": "mongodb" },
+    { "name": "Kafka", "level": 82, "category": "backend", "icon": "kafka" },
+    { "name": "REST APIs / OpenAPI", "level": 92, "category": "backend", "icon": "api" },
+    { "name": "JasperReports", "level": 80, "category": "backend", "icon": "jasper" },
+    { "name": "Docker", "level": 85, "category": "devops", "icon": "docker" },
+    { "name": "Kubernetes", "level": 75, "category": "devops", "icon": "kubernetes" },
+    { "name": "GitLab CI/CD", "level": 88, "category": "devops", "icon": "gitlab" },
+    { "name": "SonarQube", "level": 82, "category": "devops", "icon": "sonar" },
+    { "name": "Liquibase", "level": 80, "category": "devops", "icon": "liquibase" },
+    { "name": "Maven", "level": 85, "category": "devops", "icon": "maven" },
+    { "name": "Git", "level": 92, "category": "tools", "icon": "git" },
+    { "name": "Jira / Scrum", "level": 90, "category": "tools", "icon": "jira" },
+    { "name": "Keycloak", "level": 80, "category": "tools", "icon": "keycloak" },
+    { "name": "Grafana / Prometheus", "level": 75, "category": "tools", "icon": "grafana" },
+    { "name": "Selenium / JUnit", "level": 82, "category": "tools", "icon": "testing" }
+  ],
+  "projects": [
+    {
+      "id": "bl-werh",
+      "title": "BL-WERH — HR Management Platform",
+      "description": "Enterprise HR solution for French municipalities, managing employee records, contracts, careers, and payroll cycles.",
+      "longDescription": "Developed a comprehensive HR management platform for French municipalities at Berger-Levrault. Built backend microservices with Java 17 and Spring Boot for managing employee records, contracts, career paths, and the full payroll cycle. Designed and implemented dedicated Angular micro-frontends for employee profiles and payroll tracking. Created the API-Edition service for generating, viewing, and downloading pay slips in PDF format using JasperReports. Implemented asynchronous inter-service communication via Kafka (bl-exchange) for syncing business events across HR services. Managed database versioning with Liquibase and documented all APIs with OpenAPI.",
+      "image": "",
+      "technologies": ["Java 17", "Spring Boot", "Angular", "NgRx", "RxJS", "Kafka", "JasperReports", "Liquibase", "OpenAPI", "Kubernetes", "Docker", "PostgreSQL"],
+      "featured": true
+    },
+    {
+      "id": "bl-hubtyt",
+      "title": "BL-HubTyt — E-Government Hub",
+      "description": "Multi-tenant electronic administration hub built on microservices and micro-frontend architecture with full CI/CD pipeline.",
+      "longDescription": "Designed and developed a multi-tenant HUB for electronic administration at Berger-Levrault, built on a microservices and micro-frontend architecture with industrialization and multi-tenant capabilities. Implemented an API Gateway for centralized management and security of APIs and microservices. Set up key infrastructure including Spring Cloud Load Balancer, Gitea, Keycloak for authentication, and Redis for caching. Integrated RabbitMQ as a message broker for seamless inter-service communication. Created unit tests improving code coverage, tracked with SonarQube. Built and managed CI/CD pipelines with GitLab CI/CD.",
+      "image": "",
+      "technologies": ["Spring Boot", "Angular", "Keycloak", "Redis", "RabbitMQ", "Spring Cloud", "GitLab CI/CD", "Docker", "PostgreSQL", "MongoDB", "Grafana", "Prometheus"],
+      "featured": true
+    },
+    {
+      "id": "bl-atm",
+      "title": "BL-ATM — Automated Test Manager",
+      "description": "Katalon Studio plugin for synchronizing Gherkin scenarios between Jira and Katalon, enabling full E2E test automation.",
+      "longDescription": "Developed a JAR plugin for Katalon Studio that synchronizes Gherkin scenarios from Jira tickets and imports them directly into Katalon. Features include editing Gherkin scenarios from Katalon, automatic updates back to Jira, Gherkin syntax validation, and matching scenarios with existing records. Enabled complete end-to-end test automation through the plugin, allowing scenario execution directly from Katalon Studio. Built with Java 7, SWT for the UI, and integrated with Zephyr Scale and Zephyr API.",
+      "image": "",
+      "technologies": ["Java", "Katalon Studio", "Jira", "Zephyr Scale", "Gherkin", "Selenium", "Groovy", "SWT"],
+      "featured": true
+    },
+    {
+      "id": "crm-ecommerce",
+      "title": "B2B CRM E-Commerce App",
+      "description": "Cross-platform mobile CRM application for B2B e-commerce, designed, developed, and deployed from scratch.",
+      "longDescription": "End-of-studies internship project at Progiciel System. Designed, developed, and deployed a full CRM e-commerce application for B2B operations, available on both Android and iOS. Built the mobile frontend with Flutter for a native cross-platform experience, powered by a Laravel backend with MySQL database. Deployed on OVHCloud infrastructure with FTP server management. Managed project tasks and sprints using Jira under Agile/Scrum methodology.",
+      "image": "",
+      "technologies": ["Flutter", "Laravel", "MySQL", "OVHCloud", "Jira"],
+      "liveUrl": "",
+      "githubUrl": "",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "id": "berger-levrault-senior",
+      "role": "Senior R&D Engineer (Ingénieur E&D Confirmé)",
+      "company": "Berger-Levrault",
+      "location": "Rabat-Salé-Kénitra, Morocco",
+      "startDate": "2024-01",
+      "endDate": "Present",
+      "description": "Leading development on BL-WERH, an enterprise HR solution for French municipalities managing employee records, contracts, careers, and payroll.",
+      "highlights": [
+        "Built backend microservices with Java 17 & Spring Boot for employee records, contracts, careers, and payroll",
+        "Designed Angular micro-frontends for employee profiles and payroll cycle tracking",
+        "Created API-Edition service for PDF pay slip generation using JasperReports",
+        "Implemented async inter-service communication via Kafka (bl-exchange)",
+        "Managed database versioning with Liquibase and API documentation with OpenAPI",
+        "Contributed to microservices & micro-frontend architecture ensuring modularity and scalability"
+      ],
+      "type": "work"
+    },
+    {
+      "id": "berger-levrault-engineer",
+      "role": "R&D Engineer (Ingénieur E&D)",
+      "company": "Berger-Levrault",
+      "location": "Rabat-Salé-Kénitra, Morocco",
+      "startDate": "2022-05",
+      "endDate": "2023-12",
+      "description": "Developed BL-HubTyt, a multi-tenant electronic administration HUB with microservices and micro-frontend architecture.",
+      "highlights": [
+        "Designed multi-tenant HUB with microservices & micro-frontend architecture",
+        "Implemented API Gateway for centralized API management and security",
+        "Set up Spring Cloud Load Balancer, Gitea, Keycloak, and Redis infrastructure",
+        "Integrated RabbitMQ for inter-service message brokering",
+        "Improved code coverage with unit tests tracked via SonarQube",
+        "Built CI/CD pipelines with GitLab CI/CD for continuous integration and deployment"
+      ],
+      "type": "work"
+    },
+    {
+      "id": "berger-levrault-atm",
+      "role": "R&D Engineer (Ingénieur E&D)",
+      "company": "Berger-Levrault",
+      "location": "Rabat-Salé-Kénitra, Morocco",
+      "startDate": "2021-11",
+      "endDate": "2022-05",
+      "description": "Developed BL-ATM, a Katalon Studio plugin for automated test management with Jira/Gherkin integration.",
+      "highlights": [
+        "Built a JAR plugin for Katalon Studio to sync Gherkin scenarios with Jira",
+        "Enabled Gherkin editing, syntax validation, and auto-sync from Katalon to Jira",
+        "Achieved full E2E test automation with direct scenario execution from Katalon",
+        "Integrated with Zephyr Scale and Zephyr API for test management"
+      ],
+      "type": "work"
+    },
+    {
+      "id": "progiciel-internship",
+      "role": "Full-Stack Developer Intern (Stage PFE)",
+      "company": "Progiciel System",
+      "location": "Casablanca, Morocco",
+      "startDate": "2021-01",
+      "endDate": "2021-07",
+      "description": "End-of-studies internship: designed, developed, and deployed a cross-platform B2B CRM e-commerce application.",
+      "highlights": [
+        "Built cross-platform mobile app with Flutter for Android & iOS",
+        "Developed Laravel backend with MySQL database",
+        "Deployed on OVHCloud infrastructure",
+        "Managed project with Jira under Agile/Scrum methodology"
+      ],
+      "type": "work"
+    },
+    {
+      "id": "uir-degree",
+      "role": "Engineer's Degree — Information Systems Engineering",
+      "company": "Université Internationale de Rabat (UIR)",
+      "location": "Rabat, Morocco",
+      "startDate": "2018-09",
+      "endDate": "2021-07",
+      "description": "Specialized in software engineering, information systems, and web technologies.",
+      "highlights": [
+        "Information Systems Engineering specialization",
+        "End-of-studies project: B2B CRM E-Commerce application",
+        "Strong foundation in software architecture and design patterns"
+      ],
+      "type": "education"
+    },
+    {
+      "id": "bac-degree",
+      "role": "Baccalauréat — Experimental Sciences",
+      "company": "Lycée Al Mirghiti",
+      "location": "Morocco",
+      "startDate": "2013-09",
+      "endDate": "2016-07",
+      "description": "Scientific baccalaureate with focus on experimental sciences.",
+      "highlights": [
+        "Experimental Sciences track"
+      ],
+      "type": "education"
+    }
+  ]
+}
