@@ -1,0 +1,270 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.illustration-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.illustration-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================
+   LIGHT MODE COLORS (default)
+   ========================================== */
+
+// Ambient glow
+.ambient-glow { opacity: 0.35; }
+.glow-start { stop-color: rgba(59, 130, 246, 0.25); }
+.glow-end   { stop-color: rgba(59, 130, 246, 0); }
+
+// Desk
+.desk-start { stop-color: #e2e8f0; }
+.desk-mid   { stop-color: #f1f5f9; }
+.desk-end   { stop-color: #e2e8f0; }
+.desk-edge  { stroke: #cbd5e1; }
+
+// Laptop base
+.laptop-base { fill: #94a3b8; }
+.trackpad    { fill: #cbd5e1; }
+
+// Monitor
+.monitor-frame { fill: #334155; }
+.screen-top    { stop-color: #1e293b; }
+.screen-bottom { stop-color: #0f172a; }
+
+// Window controls
+.win-close    { fill: #f87171; }
+.win-minimize { fill: #fbbf24; }
+.win-maximize { fill: #34d399; }
+.tab-active   { fill: #1e293b; opacity: 0.6; }
+.tab-text     { fill: #94a3b8; font-size: 7px; font-family: 'JetBrains Mono', monospace; }
+
+// Code colors
+.code-keyword   { fill: #c084fc; }  // purple
+.code-string    { fill: #86efac; }  // green
+.code-decorator { fill: #fbbf24; }  // yellow
+.code-prop      { fill: #93c5fd; }  // light blue
+.code-class     { fill: #67e8f9; }  // cyan
+.code-method    { fill: #fca5a5; }  // red/pink
+.code-bracket   { fill: #94a3b8; }  // gray
+.code-operator  { fill: #f9a8d4; }  // pink
+
+// Line numbers
+.line-numbers text {
+  fill: #475569;
+  font-size: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  opacity: 0.5;
+}
+
+// Cursor
+.cursor {
+  fill: #3b82f6;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+// Coffee
+.mug-body       { fill: #e2e8f0; }
+.mug-handle     { stroke: #cbd5e1; }
+.coffee-surface { fill: #92400e; }
+
+// Steam
+.steam {
+  stroke: #94a3b8;
+  opacity: 0;
+  stroke-linecap: round;
+}
+.steam-1 { animation: steamRise 3s ease-in-out infinite; }
+.steam-2 { animation: steamRise 3s ease-in-out 0.4s infinite; }
+.steam-3 { animation: steamRise 3s ease-in-out 0.8s infinite; }
+
+// Plant
+.pot-body   { fill: #d97706; }
+.pot-rim    { fill: #b45309; }
+.plant-stem { stroke: #16a34a; }
+.leaf       { fill: #22c55e; }
+.leaf-1     { animation: leafSway 4s ease-in-out infinite; }
+.leaf-2     { animation: leafSway 4s ease-in-out -1.5s infinite; }
+.leaf-3     { animation: leafSway 4s ease-in-out -3s infinite; }
+
+// Floating badges
+.badge-bg {
+  fill: #ffffff;
+  stroke: #e2e8f0;
+  stroke-width: 1;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+}
+.badge-bg-round {
+  fill: #ffffff;
+  stroke: #e2e8f0;
+  stroke-width: 1;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+}
+.angular-shield { stroke: #dd0031; }
+.angular-a {
+  fill: #dd0031;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+.badge-symbol {
+  fill: #3b82f6;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+.badge-symbol-sm {
+  fill: #8b5cf6;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+.git-dot  { fill: #f97316; }
+.git-line { stroke: #f97316; }
+
+
+/* ==========================================
+   DARK MODE OVERRIDES
+   ========================================== */
+:host-context(.dark) {
+  .ambient-glow { opacity: 0.2; }
+  .glow-start { stop-color: rgba(59, 130, 246, 0.3); }
+
+  .desk-start { stop-color: #1e293b; }
+  .desk-mid   { stop-color: #334155; }
+  .desk-end   { stop-color: #1e293b; }
+  .desk-edge  { stroke: #475569; }
+
+  .laptop-base { fill: #475569; }
+  .trackpad    { fill: #64748b; }
+
+  .monitor-frame { fill: #1e293b; }
+  .screen-top    { stop-color: #0f172a; }
+  .screen-bottom { stop-color: #020617; }
+
+  .tab-active { fill: #0f172a; }
+  .tab-text   { fill: #64748b; }
+
+  .mug-body       { fill: #334155; }
+  .mug-handle     { stroke: #475569; }
+  .coffee-surface { fill: #78350f; }
+  .steam          { stroke: #64748b; }
+
+  .badge-bg, .badge-bg-round {
+    fill: #1e293b;
+    stroke: #334155;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  }
+
+  .line-numbers text { fill: #64748b; }
+}
+
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+// Blinking cursor
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+// Code lines typing entrance - staggered appearance
+.code-lines rect {
+  animation: codeAppear 0.3s ease-out both;
+}
+@for $i from 1 through 40 {
+  .code-lines rect:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.08}s;
+  }
+}
+
+@keyframes codeAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Steam rising
+@keyframes steamRise {
+  0%   { opacity: 0; transform: translateY(0) scaleY(0.8); }
+  20%  { opacity: 0.5; }
+  60%  { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-16px) scaleY(1.2); }
+}
+
+// Leaf sway
+@keyframes leafSway {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(4deg); }
+}
+
+// Floating badges - each has its own rhythm
+.badge-angular {
+  animation: floatBadge 6s ease-in-out infinite;
+}
+.badge-code {
+  animation: floatBadge 7s ease-in-out -2s infinite;
+}
+.badge-api {
+  animation: floatBadge 5s ease-in-out -1s infinite;
+}
+.badge-git {
+  animation: floatBadge 8s ease-in-out -3s infinite;
+}
+.badge-terminal {
+  animation: floatBadge 6.5s ease-in-out -4s infinite;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translate(var(--tx, 0), 0); }
+  50%      { transform: translate(var(--tx, 0), -12px); }
+}
+
+// Override individual badge float paths for variety
+.badge-angular  { --tx: 0px; }
+.badge-code     { --tx: 0px; }
+.badge-api      { --tx: 0px; }
+.badge-git      { --tx: 0px; }
+.badge-terminal { --tx: 0px; }
+
+// Subtle monitor screen shimmer
+.code-lines {
+  animation: screenGlow 4s ease-in-out infinite;
+}
+
+@keyframes screenGlow {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.92; }
+}
+
+// Plant gentle float
+.plant-group {
+  animation: plantFloat 5s ease-in-out infinite;
+}
+@keyframes plantFloat {
+  0%, 100% { transform: translate(55px, 300px); }
+  50%      { transform: translate(55px, 297px); }
+}
+
+// Coffee group subtle presence
+.coffee-group {
+  animation: coffeeFloat 6s ease-in-out infinite;
+}
+@keyframes coffeeFloat {
+  0%, 100% { transform: translate(430px, 310px); }
+  50%      { transform: translate(430px, 308px); }
+}

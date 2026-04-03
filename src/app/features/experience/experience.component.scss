@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.timeline-line {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(59, 130, 246, 0.3) 10%,
+    rgba(139, 92, 246, 0.3) 90%,
+    transparent
+  );
+}
+
+.timeline-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(59, 130, 246, 0.12);
+}
+
+:host-context(.dark) .timeline-card:hover {
+  box-shadow: 0 12px 24px -8px rgba(59, 130, 246, 0.2);
+}

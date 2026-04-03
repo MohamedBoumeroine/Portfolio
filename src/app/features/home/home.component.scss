@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+
+/* Staggered hero entrance: each child delays based on --stagger-index */
+.hero-stagger {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: heroEnter 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--stagger-index, 0) * 0.12s + 0.1s);
+}
+
+@keyframes heroEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.15;
+  animation: particleFloat linear infinite;
+}
+
+.particle-1 {
+  width: 6px; height: 6px;
+  background: #3b82f6;
+  top: 20%; left: 10%;
+  animation-duration: 12s;
+}
+.particle-2 {
+  width: 4px; height: 4px;
+  background: #8b5cf6;
+  top: 60%; left: 80%;
+  animation-duration: 15s;
+  animation-delay: -3s;
+}
+.particle-3 {
+  width: 8px; height: 8px;
+  background: #3b82f6;
+  top: 80%; left: 30%;
+  animation-duration: 18s;
+  animation-delay: -6s;
+}
+.particle-4 {
+  width: 5px; height: 5px;
+  background: #8b5cf6;
+  top: 30%; left: 70%;
+  animation-duration: 14s;
+  animation-delay: -2s;
+}
+.particle-5 {
+  width: 3px; height: 3px;
+  background: #3b82f6;
+  top: 50%; left: 50%;
+  animation-duration: 16s;
+  animation-delay: -8s;
+}
+.particle-6 {
+  width: 7px; height: 7px;
+  background: #8b5cf6;
+  top: 10%; left: 60%;
+  animation-duration: 20s;
+  animation-delay: -5s;
+}
+
+@keyframes particleFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -40px) scale(1.2); }
+  50% { transform: translate(-20px, -80px) scale(0.8); }
+  75% { transform: translate(40px, -40px) scale(1.1); }
+}
+

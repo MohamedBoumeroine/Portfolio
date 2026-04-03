@@ -1,0 +1,134 @@
+<!-- Hero Section -->
+<section
+  id="home"
+  class="relative min-h-screen flex items-center overflow-hidden"
+>
+  <!-- Animated Background -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div
+      class="absolute -top-40 -right-40 w-80 h-80 bg-primary-400/20 dark:bg-primary-600/10 rounded-full blur-3xl animate-float"
+    ></div>
+    <div
+      class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-400/20 dark:bg-accent-600/10 rounded-full blur-3xl animate-float"
+      style="animation-delay: -3s"
+    ></div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary-300/10 dark:bg-primary-700/10 rounded-full blur-3xl animate-pulse-slow"
+    ></div>
+    <!-- Floating particles -->
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+      style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+  </div>
+
+  <div class="section-container relative z-10 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" *ngIf="info$ | async as info">
+      <!-- Left - Text -->
+      <div>
+        <!-- Greeting -->
+        <p
+          class="text-primary-600 dark:text-primary-400 font-mono text-sm md:text-base mb-4 hero-stagger"
+          style="--stagger-index: 0"
+        >
+          &lt;hello world /&gt; &mdash; Welcome to my portfolio
+        </p>
+
+        <!-- Name -->
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight hero-stagger"
+          style="--stagger-index: 1"
+        >
+          I'm
+          <span class="gradient-text">{{ info.name }}</span>
+        </h1>
+
+        <!-- Typing Effect -->
+        <div
+          class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-600 dark:text-gray-300 mb-6 h-10 hero-stagger"
+          style="--stagger-index: 2"
+        >
+          <span>{{ typedText }}</span>
+          <span class="border-r-2 border-primary-500 ml-1 animate-blink">&nbsp;</span>
+        </div>
+
+        <!-- Subtitle -->
+        <p
+          class="text-gray-500 dark:text-gray-400 text-base md:text-lg max-w-xl mb-8 leading-relaxed hero-stagger"
+          style="--stagger-index: 3"
+        >
+          {{ info.bio }}
+        </p>
+
+        <!-- Quick Stats -->
+        <div class="flex gap-6 mb-8 hero-stagger" style="--stagger-index: 4">
+          <div class="text-center">
+            <div class="text-2xl font-extrabold gradient-text" [appCountUp]="'4'" countSuffix="+">4+</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Years Exp.</div>
+          </div>
+          <div class="w-px bg-gray-200 dark:bg-slate-700"></div>
+          <div class="text-center">
+            <div class="text-2xl font-extrabold gradient-text" [appCountUp]="'4'">4</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Projects</div>
+          </div>
+          <div class="w-px bg-gray-200 dark:bg-slate-700"></div>
+          <div class="text-center">
+            <div class="text-2xl font-extrabold gradient-text" [appCountUp]="'20'" countSuffix="+">20+</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Technologies</div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-wrap gap-4 hero-stagger"
+          style="--stagger-index: 5"
+        >
+          <a routerLink="/projects" class="btn-primary group">
+            <svg class="w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            View Projects
+          </a>
+          <a routerLink="/contact" class="btn-outline group">
+            <svg class="w-5 h-5 group-hover:-rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Get in Touch
+          </a>
+          <a
+            *ngIf="info.resumeUrl"
+            [href]="info.resumeUrl"
+            download
+            class="btn-outline group"
+          >
+            <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="mt-12 flex items-center gap-2 text-gray-400 hero-stagger" style="--stagger-index: 6">
+          <div class="w-6 h-10 border-2 border-gray-300 dark:border-gray-600 rounded-full flex justify-center">
+            <div class="w-1.5 h-3 bg-primary-500 rounded-full mt-1.5 animate-bounce"></div>
+          </div>
+          <span class="text-xs font-mono">Scroll to explore</span>
+        </div>
+      </div>
+
+      <!-- Right - Animated Developer Illustration -->
+      <div class="hidden lg:flex justify-center hero-stagger" style="--stagger-index: 2">
+        <app-dev-illustration
+          ariaLabel="Animated illustration of a developer workspace with laptop showing Angular code, floating tech badges, coffee mug, and plant"
+        ></app-dev-illustration>
+      </div>
+    </div>
+  </div>
+</section>
