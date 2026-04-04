@@ -48,8 +48,38 @@
       "id": "bl-werh",
       "title": "BL-WERH — HR Management Platform",
       "description": "Enterprise HR solution for French municipalities, managing employee records, contracts, careers, and payroll cycles.",
-      "longDescription": "Developed a comprehensive HR management platform for French municipalities at Berger-Levrault. Built backend microservices with Java 17 and Spring Boot for managing employee records, contracts, career paths, and the full payroll cycle. Designed and implemented dedicated Angular micro-frontends for employee profiles and payroll tracking. Created the API-Edition service for generating, viewing, and downloading pay slips in PDF format using JasperReports. Implemented asynchronous inter-service communication via Kafka (bl-exchange) for syncing business events across HR services. Managed database versioning with Liquibase and documented all APIs with OpenAPI.",
-      "image": "",
+      "longDescription": "Developed a comprehensive HR management platform for French municipalities at Berger-Levrault. Built backend microservices with Java 17 and Spring Boot for managing employee records, contracts, career paths, and the full payroll cycle.",
+      "detail": {
+        "overview": "Comprehensive HR management platform built for French municipalities at Berger-Levrault. Handles the entire employee lifecycle — from onboarding and career tracking to payroll processing and document generation — using a microservices architecture.",
+        "features": [
+          "Employee record management — profiles, contracts, and career tracking",
+          "Full payroll cycle management and tracking via dedicated micro-frontend",
+          "PDF pay slip generation, viewing, and download through API-Edition service",
+          "Asynchronous inter-service communication via Kafka (bl-exchange)",
+          "Database versioning with Liquibase across microservices",
+          "RESTful API documentation with OpenAPI/Swagger"
+        ],
+        "role": [
+          "Built backend microservices with Java 17 & Spring Boot for HR domain logic",
+          "Designed and implemented Angular micro-frontends for employee profiles and payroll",
+          "Created the API-Edition service for PDF pay slip generation using JasperReports",
+          "Implemented Kafka-based event sync between HR microservices",
+          "Managed database schema versioning with Liquibase",
+          "Documented all service APIs with OpenAPI specifications"
+        ],
+        "challenges": [
+          "Reliable event sync across HR microservices → Kafka messaging (bl-exchange) for async communication",
+          "Complex payroll document generation at scale → Dedicated API-Edition service with JasperReports",
+          "Schema evolution across multiple services → Liquibase for version-controlled migrations"
+        ]
+      },
+      "image": "assets/images/projects/werh-1.png",
+      "images": [
+        "assets/images/projects/werh-1.png",
+        "assets/images/projects/werh-2.png",
+        "assets/images/projects/werh-3.png",
+        "assets/images/projects/werh-4.png"
+      ],
       "technologies": ["Java 17", "Spring Boot", "Angular", "NgRx", "RxJS", "Kafka", "JasperReports", "Liquibase", "OpenAPI", "Kubernetes", "Docker", "PostgreSQL"],
       "featured": true
     },
@@ -57,7 +87,32 @@
       "id": "bl-hubtyt",
       "title": "BL-HubTyt — E-Government Hub",
       "description": "Multi-tenant electronic administration hub built on microservices and micro-frontend architecture with full CI/CD pipeline.",
-      "longDescription": "Designed and developed a multi-tenant HUB for electronic administration at Berger-Levrault, built on a microservices and micro-frontend architecture with industrialization and multi-tenant capabilities. Implemented an API Gateway for centralized management and security of APIs and microservices. Set up key infrastructure including Spring Cloud Load Balancer, Gitea, Keycloak for authentication, and Redis for caching. Integrated RabbitMQ as a message broker for seamless inter-service communication. Created unit tests improving code coverage, tracked with SonarQube. Built and managed CI/CD pipelines with GitLab CI/CD.",
+      "longDescription": "Designed and developed a multi-tenant HUB for electronic administration at Berger-Levrault, built on a microservices and micro-frontend architecture with industrialization and multi-tenant capabilities.",
+      "detail": {
+        "overview": "Multi-tenant electronic administration HUB at Berger-Levrault. Built on microservices and micro-frontend architecture with full industrialization, CI/CD pipelines, and comprehensive monitoring.",
+        "features": [
+          "API Gateway for centralized API management and security",
+          "Multi-tenant architecture supporting multiple municipalities",
+          "Spring Cloud Load Balancer for service discovery and routing",
+          "Keycloak-based authentication and authorization",
+          "Redis caching layer for performance optimization",
+          "RabbitMQ message broker for inter-service communication",
+          "Comprehensive monitoring with Grafana & Prometheus"
+        ],
+        "role": [
+          "Designed multi-tenant HUB architecture with microservices & micro-frontends",
+          "Implemented API Gateway for centralized API management",
+          "Set up infrastructure: Spring Cloud, Keycloak, Redis, Gitea",
+          "Integrated RabbitMQ for inter-service messaging",
+          "Improved code coverage with unit tests tracked via SonarQube",
+          "Built CI/CD pipelines with GitLab CI/CD"
+        ],
+        "challenges": [
+          "Multi-tenant data isolation → Tenant-aware request routing and data partitioning",
+          "Service discovery in containerized environment → Spring Cloud Load Balancer",
+          "CI/CD pipeline for microservices ecosystem → GitLab CI/CD with Docker"
+        ]
+      },
       "image": "",
       "technologies": ["Spring Boot", "Angular", "Keycloak", "Redis", "RabbitMQ", "Spring Cloud", "GitLab CI/CD", "Docker", "PostgreSQL", "MongoDB", "Grafana", "Prometheus"],
       "featured": true
@@ -66,18 +121,75 @@
       "id": "bl-atm",
       "title": "BL-ATM — Automated Test Manager",
       "description": "Katalon Studio plugin for synchronizing Gherkin scenarios between Jira and Katalon, enabling full E2E test automation.",
-      "longDescription": "Developed a JAR plugin for Katalon Studio that synchronizes Gherkin scenarios from Jira tickets and imports them directly into Katalon. Features include editing Gherkin scenarios from Katalon, automatic updates back to Jira, Gherkin syntax validation, and matching scenarios with existing records. Enabled complete end-to-end test automation through the plugin, allowing scenario execution directly from Katalon Studio. Built with Java 7, SWT for the UI, and integrated with Zephyr Scale and Zephyr API.",
+      "longDescription": "Developed a JAR plugin for Katalon Studio that synchronizes Gherkin scenarios from Jira tickets and imports them directly into Katalon, enabling complete end-to-end test automation.",
+      "detail": {
+        "overview": "Katalon Studio plugin for automated test management at Berger-Levrault. Bridges the gap between Jira test cases and Katalon Studio for seamless E2E test automation with Gherkin scenarios.",
+        "features": [
+          "Sync Gherkin scenarios from Jira directly into Katalon Studio",
+          "Edit Gherkin scenarios within Katalon with auto-sync back to Jira",
+          "Gherkin syntax validation and error reporting",
+          "Automatic matching of scenarios with existing test records",
+          "Direct scenario execution from Katalon Studio",
+          "Integration with Zephyr Scale and Zephyr API"
+        ],
+        "role": [
+          "Developed the JAR plugin from scratch for Katalon Studio",
+          "Built SWT-based UI for scenario management",
+          "Implemented Jira & Zephyr Scale API integrations",
+          "Created Gherkin parser and syntax validator",
+          "Enabled full E2E test automation workflow"
+        ],
+        "challenges": [
+          "Bidirectional sync between Jira and Katalon → Custom API integration with conflict resolution",
+          "Gherkin syntax validation in real-time → Built a dedicated parser with error highlighting",
+          "Plugin compatibility across Katalon versions → Modular architecture with version-agnostic APIs"
+        ]
+      },
       "image": "",
       "technologies": ["Java", "Katalon Studio", "Jira", "Zephyr Scale", "Gherkin", "Selenium", "Groovy", "SWT"],
       "featured": true
     },
     {
-      "id": "crm-ecommerce",
-      "title": "B2B CRM E-Commerce App",
-      "description": "Cross-platform mobile CRM application for B2B e-commerce, designed, developed, and deployed from scratch.",
-      "longDescription": "End-of-studies internship project at Progiciel System. Designed, developed, and deployed a full CRM e-commerce application for B2B operations, available on both Android and iOS. Built the mobile frontend with Flutter for a native cross-platform experience, powered by a Laravel backend with MySQL database. Deployed on OVHCloud infrastructure with FTP server management. Managed project tasks and sprints using Jira under Agile/Scrum methodology.",
-      "image": "",
-      "technologies": ["Flutter", "Laravel", "MySQL", "OVHCloud", "Jira"],
+      "id": "ecolens-crm",
+      "title": "EcoLens — B2B CRM E-Commerce",
+      "description": "Cross-platform mobile CRM for an optical lens supplier, enabling B2B clients to browse catalogs, place orders, and track deliveries in real time.",
+      "longDescription": "End-of-studies project at Progiciel System. Designed and deployed a full B2B CRM e-commerce app for EcoLens, an optical lens supplier in Casablanca.",
+      "detail": {
+        "overview": "B2B mobile CRM e-commerce application built for EcoLens, an optical lens supplier in Casablanca. Enables opticians to browse personalized product catalogs, place orders with precise lens parameters, track deliveries in real time, and manage financial documents — all from a single cross-platform app.",
+        "features": [
+          "Secure client authentication with role-based access",
+          "Product catalog with category filters (Bleu, Minerale, Essentielle, Accessoires)",
+          "Personalized pricing per client based on commercial agreements",
+          "Order placement with lens parameters (Cylindre, Sphere, Axe, Oeil)",
+          "Real-time order tracking with delivery status timeline",
+          "Financial document management — invoices, payments, and balance tracking",
+          "Promotions and news module for monthly deals",
+          "ERP integration for automated data synchronization"
+        ],
+        "role": [
+          "Designed the full application architecture (frontend, backend, deployment)",
+          "Built cross-platform mobile UI with Flutter for Android & iOS",
+          "Developed RESTful API backend with Laravel and MySQL",
+          "Implemented ERP data sync for products, pricing, and order status",
+          "Deployed on OVHCloud infrastructure with FTP server management",
+          "Managed project sprints with Jira under Agile/Scrum methodology"
+        ],
+        "challenges": [
+          "Personalized pricing per client → Dynamic price engine synced with ERP data",
+          "Complex lens parameter ordering (Cylindre, Sphere, Axe) → Custom order form with validation",
+          "Real-time delivery tracking → Status timeline with GPS-based driver tracking"
+        ]
+      },
+      "image": "assets/images/projects/ecolens-1.png",
+      "images": [
+        "assets/images/projects/ecolens-1.png",
+        "assets/images/projects/ecolens-2.png",
+        "assets/images/projects/ecolens-3.png",
+        "assets/images/projects/ecolens-4.png",
+        "assets/images/projects/ecolens-5.png"
+      ],
+      "imageLayout": "portrait",
+      "technologies": ["Flutter", "Laravel", "MySQL", "REST API", "OVHCloud", "Jira"],
       "liveUrl": "",
       "githubUrl": "",
       "featured": false
