@@ -81,7 +81,8 @@
         "assets/images/projects/werh-4.png"
       ],
       "technologies": ["Java 17", "Spring Boot", "Angular", "NgRx", "RxJS", "Kafka", "JasperReports", "Liquibase", "OpenAPI", "Kubernetes", "Docker", "PostgreSQL"],
-      "featured": true
+      "featured": true,
+      "category": "professional"
     },
     {
       "id": "bl-hubtyt",
@@ -115,7 +116,8 @@
       },
       "image": "",
       "technologies": ["Spring Boot", "Angular", "Keycloak", "Redis", "RabbitMQ", "Spring Cloud", "GitLab CI/CD", "Docker", "PostgreSQL", "MongoDB", "Grafana", "Prometheus"],
-      "featured": true
+      "featured": true,
+      "category": "professional"
     },
     {
       "id": "bl-atm",
@@ -147,7 +149,8 @@
       },
       "image": "",
       "technologies": ["Java", "Katalon Studio", "Jira", "Zephyr Scale", "Gherkin", "Selenium", "Groovy", "SWT"],
-      "featured": true
+      "featured": true,
+      "category": "professional"
     },
     {
       "id": "ecolens-crm",
@@ -192,7 +195,44 @@
       "technologies": ["Flutter", "Laravel", "MySQL", "REST API", "OVHCloud", "Jira"],
       "liveUrl": "",
       "githubUrl": "",
-      "featured": false
+      "featured": false,
+      "category": "professional"
+    },
+    {
+      "id": "portfolio-website",
+      "title": "Personal Portfolio Website",
+      "description": "A modern responsive portfolio built with Angular and Tailwind CSS to showcase my projects, skills, and experience. Designed with a clean UI/UX to attract recruiters and highlight my technical profile.",
+      "longDescription": "Designed and developed a personal portfolio website from scratch using Angular 16, TypeScript, and Tailwind CSS. Features smooth route animations, dark mode with system preference detection, scroll-reveal animations via custom IntersectionObserver directives, and a fully data-driven architecture.",
+      "detail": {
+        "overview": "A clean, modern portfolio site designed to highlight my technical profile to recruiters. Built with Angular 16 using lazy-loaded feature modules, a custom design system via Tailwind CSS, and a fully responsive layout optimised for any device.",
+        "features": [
+          "Lazy-loaded Angular feature modules for optimal initial load performance",
+          "Dark/light mode with localStorage persistence and system prefers-color-scheme fallback",
+          "Smooth route transition animations with Angular Animations (enter/leave coordination)",
+          "Scroll-reveal effects via a custom IntersectionObserver directive — no external library",
+          "Count-up animation directive triggered on viewport entry",
+          "Data-driven — all content served from a single portfolio.json file via DataService",
+          "Custom Lottie animation player wrapping lottie-web directly",
+          "Fully responsive layout — mobile, tablet, and desktop",
+          "Deployed on GitHub Pages via angular-cli-ghpages"
+        ],
+        "role": [
+          "Designed the full UI/UX from scratch with a recruiter-focused, distraction-free layout",
+          "Architected Angular 16 app with lazy-loaded feature modules and a reactive data layer",
+          "Built reusable directives for scroll-reveal and count-up viewport animations",
+          "Configured Tailwind CSS with a custom design system — colors, typography, keyframe animations",
+          "Set up GitHub Pages deployment pipeline"
+        ],
+        "challenges": [
+          "Smooth route transitions without flickering → Angular Animations with coordinated enter/leave queries and cubic-bezier easing",
+          "Scroll-animation performance → Custom IntersectionObserver directives run outside Angular zone with throttled scroll events",
+          "Consistent design system → Tailwind config extended with primary, accent, and surface palettes and custom keyframes"
+        ]
+      },
+      "image": "",
+      "technologies": ["Angular 16", "TypeScript", "Tailwind CSS", "SCSS", "RxJS", "Angular Animations", "GitHub Pages"],
+      "featured": true,
+      "category": "personal"
     }
   ],
   "experience": [
